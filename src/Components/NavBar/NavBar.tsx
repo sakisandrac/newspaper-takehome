@@ -1,8 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import './NavBar.css'
 
 const NavBar = () => {
   return (
-    <div>NavBar</div>
+    <nav className='navbar-page'>
+      <main className='navbar-main'>
+        <div className='navbar-logo-container'>
+          <p className='navbar-logo'>NewsHive</p>
+        </div>
+        <div className="nav-link-container">
+          <NavLink className="nav-link" to="/" aria-label="link to homepage">Home</NavLink>
+          <NavLink className="nav-link" to="/search" aria-label="link to search page">Search</NavLink>
+        </div>
+      </main>
+    </nav>
   )
 }
 
