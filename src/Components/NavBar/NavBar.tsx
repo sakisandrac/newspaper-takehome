@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css'
+import bee from '../../images/bees.png';
 
 const NavBar = () => {
   return (
@@ -9,6 +10,7 @@ const NavBar = () => {
       <main className='navbar-main'>
         <div className='navbar-logo-container'>
           <Link to='/' className='navbar-logo'>NewsHive</Link>
+          <img className='logo' src={bee} />
         </div>
         <div className="nav-link-container">
           <NavLink className="nav-link" to="/" aria-label="link to homepage">Home</NavLink>

@@ -16,11 +16,11 @@ a:hover {
   background-color: #ffc300;
   display: flex;
   align-items: center;
-  justify-self: space-between;
+  justify-content: center;
   height: 80px;
   width: 100%;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
-  font-family: 'Monsterrat', sans-serif;  
+  font-family: 'Bebas Neue', sans-serif;  
   z-index: 10;
   position: fixed;
 }
@@ -46,12 +46,19 @@ a:hover {
   align-items: center;
 }
 
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+}
 .navbar-logo {
   font-family: 'Pacifico', cursive;
   margin-left: 20px;
   font-size: 2.2rem;
 }
 
+.logo {
+  height: 50px;
+}
 @media (max-width: 800px) {
   .nav-link-container {
     width: 50%;
