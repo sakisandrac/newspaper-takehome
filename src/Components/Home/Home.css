@@ -4,8 +4,24 @@
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .home-main {
-  margin-top: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h1 {
+  margin: 180px 0 0 0;
+  color: #FFB700;
+}
+
+h2 {
+  margin: 5px;
+  font-size: 1.3rem;
 }

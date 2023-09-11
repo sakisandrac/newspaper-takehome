@@ -1,5 +1,6 @@
 import React from 'react'
 import { Article } from '../../types'
+import './ArticleCard.css'
 
 interface ArticleProps {
   article: Article
