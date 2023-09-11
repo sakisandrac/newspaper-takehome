@@ -1,9 +1,18 @@
 import React from 'react'
+import { Article } from '../../types'
 
-const Article = () => {
+interface ArticleProps {
+  article: Article
+}
+const ArticleCard = ({article}: ArticleProps) => {
   return (
-    <div>Article</div>
+    <section className='article-container'>
+      <div className='article-line'></div>
+      <div className='article-text-container'>
+        <p>{article.title}</p>
+      </div>
+    </section>
   )
 }
 
-export default Article
+export default ArticleCard

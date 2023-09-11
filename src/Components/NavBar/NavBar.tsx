@@ -8,7 +8,7 @@ const NavBar = () => {
     <nav className='navbar-page'>
       <main className='navbar-main'>
         <div className='navbar-logo-container'>
-          <p className='navbar-logo'>NewsHive</p>
+          <Link to='/' className='navbar-logo'>NewsHive</Link>
         </div>
         <div className="nav-link-container">
           <NavLink className="nav-link" to="/" aria-label="link to homepage">Home</NavLink>
