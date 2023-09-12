@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ArticleData } from "../../types";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import "./Home.css";
+import { useLocation, useParams, useSearchParams } from "react-router-dom";
 
 interface HomeProps {
   articles: ArticleData;
   err: boolean
   loading: boolean
+  setCategory: React.Dispatch<React.SetStateAction<string>>
 }
 
-const Home = ({ articles, err, loading }: HomeProps) => {
-  const articleEls = articles.articles.map((art) => <ArticleCard key={art.title} article={art} />);
+const Home = ({ articles, err, loading, setCategory }: HomeProps) => {
+  const articleEls = articles.articles.map((art) => <ArticleCard key={art.title + articles.articles.indexOf(art)} article={art} />);
+  const location = useLocation().pathname
+  const {category} = useParams()
+
+  useEffect(() => {
+  if(location !== '/') {
+    console.log()
+    setCategory(category!)
+  }
+  },[category])
 
   return (
     <div className="home-page">

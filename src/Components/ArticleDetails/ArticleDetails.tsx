@@ -1,6 +1,6 @@
 import React from 'react'
 import { Article, ArticleData } from '../../types'
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import './ArticleDetails.css'
 import { datePublished } from '../../utils';
 
@@ -9,11 +9,12 @@ interface ArticleDetailsProps {
 }
 
 const ArticleDetails = ({articles}: ArticleDetailsProps) => {
-const { id } = useParams()
-
+const { id } = useParams();
   const foundArticle = () => {
-    return articles.articles.find(art => art.publishedAt === id)
+      return articles.articles.find(art => art.publishedAt === id)
+
   }
+    
 
   console.log(foundArticle())
   return (

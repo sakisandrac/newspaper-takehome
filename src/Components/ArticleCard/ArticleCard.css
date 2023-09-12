@@ -45,6 +45,13 @@
   margin-top: 10px;
 }
 
+.article-error {
+  width: 320px;
+  height: 150px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
 .article-date {
   margin: 0;
   font-size: .6rem;
