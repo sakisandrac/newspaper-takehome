@@ -1,6 +1,6 @@
 .article-container {
-  width: 300px;
-  height: 450px;
+  width: 320px;
+  height: 470px;
   border-left: 1px solid rgba(202, 202, 202, 0.626);
   border-right: 1px solid rgba(202, 202, 202, 0.626);
   border-bottom: 1px solid rgba(202, 202, 202, 0.626);
@@ -39,8 +39,13 @@
 }
 
 .article-img {
-  width: 300px;
+  width: 320px;
   height: 150px;
   object-fit: cover;
   margin-top: 10px;
+}
+
+.article-date {
+  margin: 0;
+  font-size: .6rem;
 }

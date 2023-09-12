@@ -10,12 +10,12 @@ const NavBar = () => {
       <main className='navbar-main'>
         <div className='navbar-logo-container'>
           <Link to='/' className='navbar-logo'>NewsHive</Link>
-          <img className='logo' src={bee} />
+          <img className='logo'src={bee} />
         </div>
-        <div className="nav-link-container">
+        {/* <div className="nav-link-container">
           <NavLink className="nav-link" to="/" aria-label="link to homepage">Home</NavLink>
           <NavLink className="nav-link" to="/search" aria-label="link to search page">Search</NavLink>
-        </div>
+        </div> */}
       </main>
     </nav>
   )
