@@ -14,6 +14,7 @@ const ArticleCard = ({ article }: ArticleProps) => {
     <section className="article-container">
       
       <div className="article-line"></div>
+      <Link to={`/article/${article.publishedAt}`}>
       <div className="article-text-container">
         <p className="article-name">{article.source.name}</p>
         {article.urlToImage ? <img src={article.urlToImage} className="article-img" alt={article.description} /> : <img className='article-error' src={imgError} />}
@@ -25,6 +26,7 @@ const ArticleCard = ({ article }: ArticleProps) => {
           <p className="article-date">Published: {datePublished(article.publishedAt)}</p>
         </div>
       </div>
+      </Link>
     </section>
   );
 };

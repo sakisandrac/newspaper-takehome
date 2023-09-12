@@ -9,8 +9,7 @@
 }
 
 .details-main {
-  margin: 100px 0;
-
+  margin: 120px 0;
 }
 
 .details-container {
@@ -33,6 +32,7 @@
 
 .details-img {
   width: 80%;
+  max-width: 800px;
   margin: 15px;
 }
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ArticleData } from "../../types";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import "./Home.css";
-import { useLocation, useParams, useSearchParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 interface HomeProps {
   articles: ArticleData;
@@ -12,15 +12,17 @@ interface HomeProps {
 }
 
 const Home = ({ articles, err, loading, setCategory }: HomeProps) => {
-  const articleEls = articles.articles.map((art) => <ArticleCard key={art.title + articles.articles.indexOf(art)} article={art} />);
+  const articleEls = articles.articles.map((art) => {
+  if(art.title !== '[Removed]') {
+   return <ArticleCard key={art.title + articles.articles.indexOf(art)} article={art} />
+  }});
+
   const location = useLocation().pathname
-  const {category} = useParams()
+  const { category } = useParams()
 
   useEffect(() => {
-  if(location !== '/') {
-    console.log()
+    console.log('catebory', category)
     setCategory(category!)
-  }
   },[category])
 
   return (
@@ -28,7 +30,7 @@ const Home = ({ articles, err, loading, setCategory }: HomeProps) => {
       {err && <p>ERROR LOADING PAGE, PLEASE TRY AGAIN</p>}
       {!err && loading ? <p>LOADING...</p> : !err && 
       <>
-        <h1>Headlines</h1>
+        <h1>{location === '/' ? 'Headlines' : `${category}`}</h1>
         <h2><i>The top stories from today's news in the United States</i></h2>
         <main className="home-main">{articleEls}</main>
       </>

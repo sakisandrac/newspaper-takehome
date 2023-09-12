@@ -2,12 +2,11 @@
   height: 100vh;
   width: 100%;
   margin: 0;
-  /* margin-top: 300px; */
   display: flex;
-  justify-content: center;
+  margin-top: 100px;
   flex-direction: column;
   align-items: center;
-
+  overflow-y: scroll;
 }
 
 .home-main {
@@ -19,11 +18,18 @@
 
 h1 {
   font-family: 'Bebas Neue', sans-serif;
-  margin: 3000px 0 0 0;
   color: #FFB700;
+  margin: 20px 0 5px 0;
 }
 
 h2 {
   margin: 5px;
   font-size: 1.3rem;
+  text-align: center;
+}
+
+@media (max-width: 1287px) {
+  /* h1 {
+    margin: 4500px 0 0 0;
+  } */
 }

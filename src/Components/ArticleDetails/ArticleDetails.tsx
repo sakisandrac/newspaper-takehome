@@ -12,7 +12,6 @@ const ArticleDetails = ({articles}: ArticleDetailsProps) => {
 const { id } = useParams();
   const foundArticle = () => {
       return articles.articles.find(art => art.publishedAt === id)
-
   }
     
 
