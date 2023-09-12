@@ -12,20 +12,28 @@ import { ArticleData } from "../../types";
 function App() {
   const [articles, setArticles] = useState<ArticleData>(data);
   const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState(false)
 
-  // useEffect(() => {
-  //   getArticles().then(data => {
-  //     setArticles(data)
-  //   })
-  // },[])
+  useEffect(() => {
+    setLoading(true)
+    getArticles().then((data) => {
+      setLoading(false)
+      console.log(data)
+      setArticles(data)
+    })
+    .catch(err => {
+      setErr(true)
+      console.log(err)
+    })
+  },[])
 
   return (
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home articles={articles} />} />
+        <Route path="/" element={<Home articles={articles} loading={loading} err={err}/>} />
         <Route path="/article/:id" element={<ArticleDetails articles={articles}/>} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/category/:category" element={<Search />} />
       </Routes>
     </div>
   );
