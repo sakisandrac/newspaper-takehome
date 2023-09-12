@@ -23,9 +23,9 @@ const { id } = useParams();
           <p className='details-title'>{foundArticle()?.title}</p>
           <p><span className='details-bold'>Source:</span> {foundArticle()?.source.name} |  <span className='details-bold'>Published:</span> {datePublished(foundArticle()?.publishedAt)}</p>
           <p><span className='details-bold'>Author:</span> {foundArticle()?.author}</p>
-          <img className='details-img' src={foundArticle()?.urlToImage}></img>
-          <p className='details-description'>{foundArticle()?.description}</p>
-          <a href={foundArticle()?.url}>Link to Full Article</a>
+          <img className='details-img' src={foundArticle()?.urlToImage} alt={foundArticle()?.description}></img>
+          <p className='details-description'>{foundArticle()?.content.split('[')[0]}</p>
+          <a className='details-link' href={foundArticle()?.url}>Click here to continue reading full article</a>
         </section>
       </main>
     </div>

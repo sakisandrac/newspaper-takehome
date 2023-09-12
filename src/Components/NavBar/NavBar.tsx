@@ -23,15 +23,15 @@ const NavBar = ({menuOpen, setMenuOpen}: NavBarProps) => {
             <img src={burger} alt='nav menu' onClick={handleClick}/>
           </div>
           <Link to='/' className='navbar-logo'>NewsHive</Link>
-          <img className='logo'src={bee} />
+          <img className='logo' alt ='bee logo' src={bee} />
         </div>
         <div className="nav-link-container">
-          <NavLink className="nav-link" to="/category/business" aria-label="link to homepage">Business</NavLink>
-          <NavLink className="nav-link" to="/category/entertainment" aria-label="link to entertainment page">Entertainment</NavLink>
-          <NavLink className="nav-link" to="/category/sports" aria-label="link to sports page">Sports</NavLink>
-          <NavLink className="nav-link" to="/category/health" aria-label="link to health page">Health</NavLink>
-          <NavLink className="nav-link" to="/category/technology" aria-label="link to technology page">Technology</NavLink>
-          <NavLink className="nav-link" to="/category/science" aria-label="link to science page">Science</NavLink>
+          <NavLink tabIndex={0} className="nav-link" to="/category/business" aria-label="link to homepage">Business</NavLink>
+          <NavLink tabIndex={0} className="nav-link" to="/category/entertainment" aria-label="link to entertainment page">Entertainment</NavLink>
+          <NavLink tabIndex={0} className="nav-link" to="/category/sports" aria-label="link to sports page">Sports</NavLink>
+          <NavLink tabIndex={0} className="nav-link" to="/category/health" aria-label="link to health page">Health</NavLink>
+          <NavLink tabIndex={0} className="nav-link" to="/category/technology" aria-label="link to technology page">Technology</NavLink>
+          <NavLink tabIndex={0} className="nav-link" to="/category/science" aria-label="link to science page">Science</NavLink>
         </div>
       </main>
     </nav>

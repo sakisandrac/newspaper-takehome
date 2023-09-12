@@ -22,3 +22,12 @@ a:hover {
   color: #322643;
   cursor: pointer;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

@@ -17,7 +17,7 @@ const ArticleCard = ({ article }: ArticleProps) => {
       <Link to={`/article/${article.publishedAt}`}>
       <div className="article-text-container">
         <p className="article-name">{article.source.name}</p>
-        {article.urlToImage ? <img src={article.urlToImage} className="article-img" alt={article.description} /> : <img className='article-error' src={imgError} />}
+        {article.urlToImage ? <img src={article.urlToImage} className="article-img" alt={article.description} /> : <img className='article-error' alt='image not found error' src={imgError} />}
         <div className="article-text">
           <p className="article-title">{article.title}</p>
           <p className="text">

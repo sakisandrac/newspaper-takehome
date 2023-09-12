@@ -44,3 +44,10 @@
 .details-description {
   font-style: italic;
 }
+
+.details-link {
+  margin-top: 10px;
+  background-color: #ffc40098;
+  padding: 7px;
+  border-radius: 10px;
+}
