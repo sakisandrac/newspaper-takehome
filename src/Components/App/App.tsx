@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "../Home/Home";
-import Article from "../ArticleCard/ArticleCard";
 import Search from "../Search/Search";
 import NavBar from "../NavBar/NavBar";
 import { getArticles } from "../../apiCalls";
@@ -26,7 +24,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home articles={articles} />} />
-        <Route path="/article/:id" element={<ArticleDetails />} />
+        <Route path="/article/:id" element={<ArticleDetails articles={articles}/>} />
         <Route path="/search" element={<Search />} />
       </Routes>
     </div>
