@@ -19,6 +19,10 @@
   width: 100%;
 }
 
+.nav-burger {
+  display: none;
+}
+
 .nav-link {
   color: #000000;
   text-decoration: none;
@@ -37,6 +41,8 @@
 .navbar-logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .navbar-logo {
   font-family: 'Pacifico', cursive;
@@ -53,7 +59,7 @@
   }
   
   .nav-link {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 
   .nav-bar {
@@ -62,8 +68,18 @@
 
 }
 
-@media (max-width: 480px) {
-  .nav-icon {
-    display: inline;
+@media (max-width: 690px) {
+  .nav-link-container {
+    display: none;
   }
+
+  .nav-burger {
+    display: flex;
+  }
+
+  .navbar-logo-container { 
+    justify-content: flex-start;
+    padding-left: 25px;
+  }
+  
 }

@@ -3,12 +3,25 @@ import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 import bee from '../../images/bees.png';
+import burger from '../../images/burger.png'
 
-const NavBar = () => {
+interface NavBarProps {
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+  menuOpen: boolean
+}
+const NavBar = ({menuOpen, setMenuOpen}: NavBarProps) => {
+
+  const handleClick = () => {
+    setMenuOpen(prev => !prev)
+  }
+
   return (
     <nav className='navbar-page'>
       <main className='navbar-main'>
         <div className='navbar-logo-container'>
+          <div className='nav-burger'> 
+            <img src={burger} alt='nav menu' onClick={handleClick}/>
+          </div>
           <Link to='/' className='navbar-logo'>NewsHive</Link>
           <img className='logo'src={bee} />
         </div>
