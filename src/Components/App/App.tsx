@@ -8,6 +8,7 @@ import { data } from "../../data/data";
 import ArticleDetails from "../ArticleDetails/ArticleDetails";
 import { ArticleData } from "../../types";
 import closeButton from '../../images/close_FILL0_wght400_GRAD0_opsz24.png'
+import NotFound from "../NotFound/NotFound";
 
 function App() {
   const [articles, setArticles] = useState<ArticleData>(data);
@@ -67,6 +68,7 @@ function App() {
         <Route path="/article/:id" element={<ArticleDetails articles={articles} />} />
         <Route path="/category/:category" element={<Home articles={articles} loading={loading} err={err} setCategory={setCategory} />} />
         <Route path="/category/article/:id" element={<ArticleDetails articles={articles} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     }
 
