@@ -19,7 +19,6 @@ At the time of this project, I am a student at Turing School of Software Enginee
 </div>
 
 ## Set up
-(NOTE: to run this project locally,<a href="https://rapidapi.com/KanjiAlive/api/learn-to-read-and-write-japanese-kanji"> you will need an api key from kanji alive</a>)
 1. Fork or clone down this respository. 
 2. In the terminal, open this app by running the command `cd <project folder name>`
 3. Run the command  `npm install` to install dependencies.
